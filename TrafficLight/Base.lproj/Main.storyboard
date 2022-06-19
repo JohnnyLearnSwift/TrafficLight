@@ -16,14 +16,51 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Npb-JM-jWh">
-                                <rect key="frame" x="87" y="111" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="KMz-L3-Lk6">
+                                <rect key="frame" x="132" y="94" width="150" height="510"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Npb-JM-jWh">
+                                        <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="150" id="48E-Iw-Lhd"/>
+                                            <constraint firstAttribute="height" constant="150" id="AXZ-Am-sk3"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="j4r-2l-6YX">
+                                        <rect key="frame" x="0.0" y="180" width="150" height="150"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="150" id="cLg-mX-g5d"/>
+                                            <constraint firstAttribute="height" constant="150" id="gUD-xr-tcG"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oCw-pv-d4F">
+                                        <rect key="frame" x="0.0" y="360" width="150" height="150"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="150" id="KB1-af-5wm"/>
+                                            <constraint firstAttribute="height" constant="150" id="LAC-Fw-I78"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NeI-Uj-eef">
+                                <rect key="frame" x="179" y="704" width="56" height="31"/>
+                                <color key="backgroundColor" systemColor="systemPinkColor"/>
+                                <color key="tintColor" systemColor="labelColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Start"/>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="labelColor"/>
+                        <constraints>
+                            <constraint firstItem="KMz-L3-Lk6" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="7hU-WD-D9l"/>
+                            <constraint firstItem="KMz-L3-Lk6" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="8NP-ay-5MX"/>
+                            <constraint firstItem="NeI-Uj-eef" firstAttribute="top" secondItem="KMz-L3-Lk6" secondAttribute="bottom" constant="100" id="i1z-0w-Vka"/>
+                            <constraint firstItem="NeI-Uj-eef" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="thu-FV-lrc"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -37,6 +74,9 @@
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
